@@ -69,7 +69,10 @@ def std_builtin(x):
     mean = sum(x) / N
 
     # Compute the mean of squares
-    S = sum(map(lambda xi: xi**2, x)) / N
+    # UNNECESSARY:
+    # S = sum(map(lambda xi: xi**2, x)) / N
+    # The built-in sum can directly iterate over arguments, no map() needed:
+    S = sum(xi**2 for xi in x) / N
 
     # Compute variance
     var = S - mean**2.0
