@@ -1,5 +1,8 @@
 from math import sqrt 
-import NumPy as np
+
+# MISTAKE: 
+# import NumPy as np
+import numpy as np
 
 def std_loops(x, start, end):
     """
