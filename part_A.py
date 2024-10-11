@@ -60,9 +60,9 @@ def std_builtin(x):
         Standard deviation of the list of numbers.
     """
 
-    num_lst = [1,2,3,4,5]
-
-    x = num_lst
+    # MISTAKE: Don't overwrite function argument with some fixed value
+    # num_lst = [1,2,3,4,5]
+    # x = num_lst
     
     N = len(x)
     # Compute mean
