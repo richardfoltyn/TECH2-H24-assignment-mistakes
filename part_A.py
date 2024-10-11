@@ -45,7 +45,7 @@ def std_loops(x):
 
     print(f'Standard deviation: {sd:.8f}')
 
-    return
+    return sd
 
 
 
@@ -83,7 +83,7 @@ def std_builtin(x):
 
     print(f'Standard deviation: {sd:.8f}')
 
-    return
+    return sd
 
 
 # List of 5 integers
