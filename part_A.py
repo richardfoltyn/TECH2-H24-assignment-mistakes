@@ -4,7 +4,7 @@ from math import sqrt
 # import NumPy as np
 import numpy as np
 
-def std_loops(x, start, end):
+def std_loops(x):
     """
     Compute standard deviation of x using loops.
 
@@ -17,8 +17,6 @@ def std_loops(x, start, end):
     sd : float
         Standard deviation of the list of numbers.
     """
-
-    x = x[start:end]
 
     # Compute mean
     mean = 0.0
@@ -91,10 +89,7 @@ def std_builtin(x):
 # List of 5 integers
 num_lst=[int(1),int(2),int(3),int(4),int(5)]
 
-start = 0
-end = len(num_lst)
-
 # Print results
-std_loops(num_lst, start, end)
+std_loops(num_lst)
 std_builtin(num_lst)
 print(f'Standard deviation: {np.std(num_lst):.8f}')
