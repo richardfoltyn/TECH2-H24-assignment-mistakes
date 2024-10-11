@@ -39,7 +39,8 @@ def std_loops(x):
     # Compute standard deviation
     sd = sqrt(var)
 
-    print(f'Standard deviation: {sd:.8f}')
+    # MISTAKE: don't print results in function that is called by other code.
+    # print(f'Standard deviation: {sd:.8f}')
 
     return sd
 
@@ -80,7 +81,8 @@ def std_builtin(x):
     # Compute standard deviation
     sd = sqrt(var)
 
-    print(f'Standard deviation: {sd:.8f}')
+    # MISTAKE: don't print results in function that is called by other code.
+    # print(f'Standard deviation: {sd:.8f}')
 
     return sd
 
@@ -93,6 +95,10 @@ if __name__ == '__main__':
     num_lst = [1, 2, 3, 4, 5]
 
     # Print results
-    std_loops(num_lst)
-    std_builtin(num_lst)
+    sd = std_loops(num_lst)
+    print(f'Standard deviation: {sd:.8f}')
+    
+    sd = std_builtin(num_lst)
+    print(f'Standard deviation: {sd:.8f}')
+    
     print(f'Standard deviation: {np.std(num_lst):.8f}')
