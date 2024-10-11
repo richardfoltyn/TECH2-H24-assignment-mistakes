@@ -85,13 +85,14 @@ def std_builtin(x):
     return sd
 
 
-# List of 5 integers
-# UNNECESSARY:
-# num_lst=[int(1),int(2),int(3),int(4),int(5)]
-# Integer literals 1, 2, 3,.. are already integers
-num_lst = [1, 2, 3, 4, 5]
+if __name__ == '__main__':
+    # List of 5 integers
+    # UNNECESSARY:
+    # num_lst=[int(1),int(2),int(3),int(4),int(5)]
+    # Integer literals 1, 2, 3,.. are already integers
+    num_lst = [1, 2, 3, 4, 5]
 
-# Print results
-std_loops(num_lst)
-std_builtin(num_lst)
-print(f'Standard deviation: {np.std(num_lst):.8f}')
+    # Print results
+    std_loops(num_lst)
+    std_builtin(num_lst)
+    print(f'Standard deviation: {np.std(num_lst):.8f}')
