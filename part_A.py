@@ -18,18 +18,14 @@ def std_loops(x):
         Standard deviation of the list of numbers.
     """
 
+    N = 0
+
     # Compute mean
     mean = 0.0
     for i, xi in enumerate(x):
         mean += xi
-
-        # Check if item is the last in the list. 
-        # This is done by trying to access the next item in the list.
-        try:
-            x[i+1]
-        except IndexError:
-            N = i + 1
-            mean /= N
+        N += 1
+    mean /= N
 
     # Compute the mean of squares
     S = 0.0
